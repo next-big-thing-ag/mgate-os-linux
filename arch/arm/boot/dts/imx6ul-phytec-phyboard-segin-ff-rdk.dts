@@ -57,7 +57,7 @@
 };
 
 &uart5 {
-	status = "okay";
+	status = "disabled";
 };
 
 &usbotg1 {
