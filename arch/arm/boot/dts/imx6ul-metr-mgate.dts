@@ -110,6 +110,11 @@
         status = "okay";
 };
 
+&uart3 {
+        pinctrl-names = "default";
+        pinctrl-0 = <&pinctrl_uart3>;
+        status = "okay";
+};
 
 &iomuxc {
     pinctrl_uart2: uart2grp {
@@ -125,8 +130,14 @@
                     MX6UL_PAD_UART3_TX_DATA__UART2_DCE_CTS  0x0b0b0
             >;
     };
-};
 
+    pinctrl_uart3: uart3grp {
+            fsl,pins = <
+                    MX6UL_PAD_UART3_TX_DATA__UART3_DCE_TX   0x1b0b1
+                    MX6UL_PAD_UART3_RX_DATA__UART3_DCE_RX   0x1b0b1
+            >;
+    };
+};
 
 &reg_backlight_en {
 	status = "disabled";
